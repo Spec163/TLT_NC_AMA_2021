@@ -19,22 +19,6 @@ jobs:
     name: Deploy project
     runs-on: ubuntu-latest
     steps:
-      ##############################################
-      # Send Start notification to Discord         #
-      ##############################################
-      - name: Send "start" notification to Discord
-        uses: appleboy/discord-action@master
-        with:
-          webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
-          webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
-          color: "#8b9b9c"
-          username: "GitHub Deploy"
-          message: |
-            Deploy started by 👤 ${{ github.actor }}
-            Changes: ${{ github.event.compare }}
-      ########################
-      # Cancel Previous Runs #
-      ########################
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.9.1
         with:
@@ -75,20 +59,6 @@ jobs:
             const script = require(`${process.env.GITHUB_WORKSPACE}/.github/if_build_fails.js`)
             await script({github, context})
       ##############################################
-      # Send Fail notification to Discord       #
-      ##############################################
-      - name: Send "Fail" notification to Discord
-        uses: appleboy/discord-action@master
-        if: ${{ failure() }}
-        with:
-          webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
-          webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
-          color: "#FF0000"
-          username: "GitHub Deploy"
-          message: |
-            Deploy failed by 👤 ${{ github.actor }}
-            Changes: ${{ github.event.compare }}
-      ##############################################
       # Add 'build_passed' label if build success  #
       ##############################################
       - name: Success actions
@@ -99,17 +69,3 @@ jobs:
           script: |
             const script = require(`${process.env.GITHUB_WORKSPACE}/.github/if_build_success.js`)
             await script({github, context})
-      ##############################################
-      # Send Success notification to Discord       #
-      ##############################################
-      - name: Send "Finish" notification to Discord
-        uses: appleboy/discord-action@master
-        if: ${{ success() }}
-        with:
-          webhook_id: ${{ secrets.DISCORD_WEBHOOK_ID }}
-          webhook_token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
-          color: "#00FF3E"
-          username: "GitHub Deploy"
-          message: |
-            Deploy finished by 👤 ${{ github.actor }}
-            Changes: ${{ github.event.compare }}
