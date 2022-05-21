@@ -50,7 +50,7 @@
     <pmd.report.format>xml</pmd.report.format>
     <mpr.root>${maven.multiModuleProjectDirectory}</mpr.root>
     <javadoc.build.version>3.3.1</javadoc.build.version>
-    <asciidoc.build.version>2.2.1</asciidoc.build.version>
+    <asciidoc.build.version>2.2.2</asciidoc.build.version>
     <springdoc.version>1.5.10</springdoc.version>
   </properties>
 
