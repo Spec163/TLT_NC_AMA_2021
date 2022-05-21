@@ -11,4 +11,4 @@
 
 
 
-[gh_docs]: https://kostua16.github.io/TLT_NC_AMA_2021/
+[gh_docs]: https://Spec163.github.io/TLT_NC_AMA_2021/
