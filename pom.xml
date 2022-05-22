@@ -287,7 +287,7 @@
                   <operation-http-request-title>Example request</operation-http-request-title>
                   <operation-http-response-title>Example response</operation-http-response-title>
                 </attributes>
-                <outputDirectory>${mpr.root}/documentation/</outputDirectory>
+                <outputDirectory>${mpr.root}/docs/</outputDirectory>
               </configuration>
             </execution>
           </executions>
@@ -313,7 +313,7 @@
             </execution>
           </executions>
           <configuration>
-            <reportOutputDirectory>documentation/apidocs</reportOutputDirectory>
+            <reportOutputDirectory>docs/apidocs</reportOutputDirectory>
           </configuration>
         </plugin>
       </plugins>

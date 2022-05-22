@@ -75,7 +75,7 @@ jobs:
         if: ${{ success() }}
         with:
           personal_token: ${{ secrets.GH_TKN }}
-          publish_dir: ./documentation
+          publish_dir: ./docs
           enable_jekyll: true
           commit_message: Updated docs for - ${{ github.event.head_commit.message }}
 

@@ -51,5 +51,5 @@ target
 
 
 /.gradle/
-documentation
+docs
 **/logs
