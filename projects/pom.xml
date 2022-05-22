@@ -154,23 +154,23 @@
 <!--          </execution>-->
 <!--        </executions>-->
 <!--      </plugin>-->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <configuration>
-          <additionalparam>-Xdoclint:none</additionalparam>
-          <show>public</show>
-          <nohelp>true</nohelp>
-        </configuration>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>org.apache.maven.plugins</groupId>-->
+<!--        <artifactId>maven-javadoc-plugin</artifactId>-->
+<!--        <configuration>-->
+<!--          <additionalparam>-Xdoclint:none</additionalparam>-->
+<!--          <show>public</show>-->
+<!--          <nohelp>true</nohelp>-->
+<!--        </configuration>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <id>attach-javadocs</id>-->
+<!--            <goals>-->
+<!--              <goal>jar</goal>-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--      </plugin>-->
     </plugins>
   </build>
 
@@ -254,18 +254,18 @@
     </profile>
   </profiles>
 
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>${javadoc.build.version}</version>
-<!--        <configuration>-->
-<!--          &lt;!&ndash;          <stylesheetfile>${basedir}/src/main/javadoc/stylesheet.css</stylesheetfile>&ndash;&gt;-->
-<!--          <show>public</show>-->
-<!--        </configuration>-->
-      </plugin>
-    </plugins>
-  </reporting>
+<!--  <reporting>-->
+<!--    <plugins>-->
+<!--      <plugin>-->
+<!--        <groupId>org.apache.maven.plugins</groupId>-->
+<!--        <artifactId>maven-javadoc-plugin</artifactId>-->
+<!--        <version>${javadoc.build.version}</version>-->
+<!--&lt;!&ndash;        <configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;          &lt;!&ndash;          <stylesheetfile>${basedir}/src/main/javadoc/stylesheet.css</stylesheetfile>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;          <show>public</show>&ndash;&gt;-->
+<!--&lt;!&ndash;        </configuration>&ndash;&gt;-->
+<!--      </plugin>-->
+<!--    </plugins>-->
+<!--  </reporting>-->
 
 </project>
