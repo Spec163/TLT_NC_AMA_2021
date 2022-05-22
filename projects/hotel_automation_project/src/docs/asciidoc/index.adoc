@@ -1,0 +1,18 @@
+== Project documentation
+
+[[categories]]
+=== Services
+
+|===
+| Service | Link | Details
+
+| Logger Service
+| link:/{root}/logger.html[Logger]
+| Logger service
+
+
+|===
+
+[[logger]]
+=== JavaDoc
+* link:/{jdocs}/[javadoc]
