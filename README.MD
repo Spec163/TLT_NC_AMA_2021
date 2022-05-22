@@ -7,8 +7,9 @@
 
 ## Documentation
 
-+ [API Documentation][gh_docs]
+[![Javadoc](https://img.shields.io/badge/JavaDoc-Online-green)](https://Spec163.github.io/TLT_NC_AMA_2021/javadoc/)
+
+[comment]: <> (+ [API Documentation][gh_docs])
+[comment]: <> ([gh_docs]: https://Spec163.github.io/TLT_NC_AMA_2021/)
 
 
-
-[gh_docs]: https://Spec163.github.io/TLT_NC_AMA_2021/
