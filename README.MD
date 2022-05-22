@@ -7,7 +7,7 @@
 
 ## Documentation
 
-+ [Documentation Site(API)][gh_docs]
++ [API Documentation][gh_docs]
 
 
 

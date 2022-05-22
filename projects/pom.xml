@@ -129,6 +129,30 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <configuration>
+              <includeDependencySources>true</includeDependencySources>
+              <dependencySourceExcludes>
+                <dependencySourceExclude>nc.unc.ama:common</dependencySourceExclude>
+                <dependencySourceExclude>nc.unc.ama:complaint_handling_service</dependencySourceExclude>
+                <dependencySourceExclude>nc.unc.ama:operation_service</dependencySourceExclude>
+                <dependencySourceExclude>nc.unc.ama:bank_service</dependencySourceExclude>
+                <dependencySourceExclude>nc.unc.ama:booking_service</dependencySourceExclude>
+                <dependencySourceExclude>nc.unc.ama:staff_service</dependencySourceExclude>
+                <dependencySourceExclude>nc.unc.ama:logger</dependencySourceExclude>
+                <dependencySourceExclude>nc.unc.ama:gateway</dependencySourceExclude>
+              </dependencySourceExcludes>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 
@@ -183,9 +207,80 @@
               </includes>
             </configuration>
           </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <configuration>
+              <linksource>true</linksource>
+              <source>8</source>
+              <show>public</show>
+              <excludePackageNames>*.asn1.*</excludePackageNames>
+              <sourceFileExcludes>
+                <exclude>**/ChannelUtils.java</exclude>
+              </sourceFileExcludes>
+              <quiet>true</quiet>
+              <notimestamp>true</notimestamp>
+              <nodeprecated>true</nodeprecated>
+              <locale>en</locale>
+              <doclint>none</doclint>
+            </configuration>
+            <executions>
+              <execution>
+                <id>aggregate</id>
+                <goals>
+                  <goal>aggregate</goal>
+                </goals>
+                <phase>site</phase>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>docs</id>
+      <activation>
+        <property>
+          <name>!skipDocs</name>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
         </plugins>
       </build>
     </profile>
   </profiles>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <configuration>
+          <doclint>none</doclint>
+        </configuration>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>javadoc</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
+
 
 </project>
