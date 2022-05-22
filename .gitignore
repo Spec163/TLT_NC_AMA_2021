@@ -49,3 +49,7 @@ target
 **/target
 **/log
 
+
+/.gradle/
+documentation
+**/logs
