@@ -48,7 +48,7 @@
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <pmd.report.format>xml</pmd.report.format>
-    <javadoc.build.version>3.3.1</javadoc.build.version>
+    <javadoc.build.version>3.4.1</javadoc.build.version>
     <asciidoc.build.version>2.2.1</asciidoc.build.version>
     <springdoc.version>1.5.10</springdoc.version>
   </properties>
