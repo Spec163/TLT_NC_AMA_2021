@@ -23,7 +23,7 @@ jobs:
       ##############
       # Add banner #
       ##############
-      - uses: zattoo/output@v1
+      - uses: zattoo/output@v2
         name: Add banner
         with:
           token:  ${{ secrets.GH_TKN }}
